@@ -12,8 +12,8 @@
 ./index.html  -  使用说明文档本身
 ```
 
-把 JS 源码手动转为 Bookmarklet 的工具 - http://chriszarate.github.io/bookmarkleter/ 
+把 JS 源码手动转为 Bookmarklet 的工具 - https://chriszarate.github.io/bookmarkleter/ 
 
 ## 安装 Bookmarklet 的方法
 
-http://pimgeek.github.io/clip-as-opml/
+https://pimgeek.github.io/clip-as-opml/
