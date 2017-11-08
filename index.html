@@ -25,7 +25,7 @@
   }
 
   function getJSCode() {
-    loadXMLDoc("https://pimgeek.github.io/clip-as-opml/dist/clip-as-opml-export.js", function() {
+    loadXMLDoc("./clip-as-opml/dist/clip-as-opml-export.js", function() {
       if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
         document.getElementById("bookmarklet").href = xmlhttp.responseText;
       }
@@ -40,9 +40,9 @@
       <div id="profile-img-frame"><img id="profile-img" alt="站务头像" src="img/site-admin.jpg" /></div>
       <div id="site-banner">
         <h1>Clip as OPML：使用说明</h1>
-        <p class="view"><a href="https://github.com/pimgeek/clip-as-opml/">项目源码 <strong>GitHub</strong></a></p>
+        <p class="view"><a href="./clip-as-opml/">项目源码 <strong>GitHub</strong></a></p>
         <ul>
-          <li class="single"><a href="https://github.com/pimgeek/clip-as-opml/">项目源码 <strong>GitHub</strong></a></li>
+          <li class="single"><a href="https://github.com/hintsnet/clip-as-opml/">项目源码 <strong>GitHub</strong></a></li>
         </ul>
       </div>
     </header>
