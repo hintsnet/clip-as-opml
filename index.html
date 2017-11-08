@@ -1,0 +1,63 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Coompatible" content="chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1 user-scalable=no">
+  <title>Clip as OPML：使用说明</title>
+  <link rel="stylesheet" href="./css/styles.css">
+  <!--[if lt IE 9]>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.2/html5shiv.js"></script>
+    <![endif]-->
+  <script>
+  var xmlhttp;
+
+  function loadXMLDoc(url, cfunc) {
+    if (window.XMLHttpRequest) { // code for IE7+, Firefox, Chrome, Opera, Safari
+      xmlhttp = new XMLHttpRequest();
+    } else { // code for IE6, IE5
+      xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+    }
+    xmlhttp.onreadystatechange = cfunc;
+    xmlhttp.open("POST", url, true);
+    xmlhttp.send();
+  }
+
+  function getJSCode() {
+    loadXMLDoc("https://pimgeek.github.io/clip-as-opml/dist/clip-as-opml-export.js", function() {
+      if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+        document.getElementById("bookmarklet").href = xmlhttp.responseText;
+      }
+    });
+  }
+  </script>
+</head>
+
+<body onload="getJSCode();">
+  <div class="wrapper">
+    <header>
+      <div id="profile-img-frame"><img id="profile-img" alt="站务头像" src="img/site-admin.jpg" /></div>
+      <div id="site-banner">
+        <h1>Clip as OPML：使用说明</h1>
+        <p class="view"><a href="https://github.com/pimgeek/clip-as-opml/">项目源码 <strong>GitHub</strong></a></p>
+        <ul>
+          <li class="single"><a href="https://github.com/pimgeek/clip-as-opml/">项目源码 <strong>GitHub</strong></a></li>
+        </ul>
+      </div>
+    </header>
+    <div class="float-stopper"></div>
+    <section>
+      <p>Clip as OPML 是一种专用工具，它可以与 Workflowy.com / Dynalist.io 等云端大纲笔记工具配合使用。如果这是你第一次听说 Workflowy / Dynalist 等大纲笔记工具，那么请阅读我撰写的 <a href="https://www.zhihu.com/question/20491194/answer/87957399">Workflowy 快速上手教程</a> 做一些基本的了解，很多笔记管理爱好者用过它以后，都觉得爱不释手。</p>
+      <p><b>--- 下面是 Clip as OPML 工具的用法说明 ---</b></p>
+      <p>把下面的【抓取为 OPML】按钮拖拽到你的浏览器书签栏，即可使用。</p>
+      <p><a id="bookmarklet" style="border:2px solid dimgray;border-radius:5px;padding:3px;background-color:silver;" href="#">抓取为 OPML </a></p>
+      <p>在需要抽取标题和 URL&nbsp;的网页上，先选中一段文字（不要取消选择），然后点击书签栏上的【抓取为 OPML】书签按钮，即可获取 OPML 代码，把这段代码复制后直接粘贴到 Workflowy / Dynalist 的新建笔记条目中即可生成笔记条目的内容。</p>
+    </section>
+  </div>
+  <div style="display:none;visibility:hidden;">
+    <!-- site stats -->
+  </div>
+</body>
+
+</html>
