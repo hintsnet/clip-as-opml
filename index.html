@@ -25,7 +25,7 @@
   }
 
   function getJSCode() {
-    loadXMLDoc("/clip-as-opml/dist/clip-as-opml-export.js", function() {
+    loadXMLDoc("./dist/clip-as-opml-export.js", function() {
       if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
         document.getElementById("bookmarklet").href = xmlhttp.responseText;
       }
